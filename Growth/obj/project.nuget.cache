@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vzpr/snsGm802l/gSNqwBOLL+uB3qMw6Itxc3w7e2W8id9XjHS0i26zA+sZ9qEhzSW/QLmovMBY6Q8VwSd1FIw==",
+  "success": true,
+  "projectFilePath": "X:\\Growth\\Growth\\Growth.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\prime\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\prime\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}

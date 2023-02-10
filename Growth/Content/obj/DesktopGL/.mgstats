@@ -1,0 +1,11 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"X:/Growth/Growth/Content/Effects/File.fx","X:/Growth/Growth/Content/bin/DesktopGL/Effects/File.xnb","EffectProcessor","CompiledEffectContent",692,598,0.6231679
+"X:/Growth/Growth/Content/Fonts/File.spritefont","X:/Growth/Growth/Content/bin/DesktopGL/Fonts/File.xnb","LocalizedFontProcessor","SpriteFontContent",2497,937,0.1578256
+"X:/Growth/Growth/Content/Textures/baby.png","X:/Growth/Growth/Content/bin/DesktopGL/Textures/baby.xnb","TextureProcessor","Texture2DContent",3217,32853,0.0272547
+"X:/Growth/Growth/Content/Textures/DuckRun.png","X:/Growth/Growth/Content/bin/DesktopGL/Textures/DuckRun.xnb","TextureProcessor","Texture2DContent",1964,32853,0.0049577
+"X:/Growth/Growth/Content/Textures/glutton.png","X:/Growth/Growth/Content/bin/DesktopGL/Textures/glutton.xnb","TextureProcessor","Texture2DContent",1081,32853,0.0053602
+"X:/Growth/Growth/Content/Textures/lou.png","X:/Growth/Growth/Content/bin/DesktopGL/Textures/lou.xnb","TextureProcessor","Texture2DContent",2165,65621,0.0072096
+"X:/Growth/Growth/Content/Textures/monkey.png","X:/Growth/Growth/Content/bin/DesktopGL/Textures/monkey.xnb","TextureProcessor","Texture2DContent",3169,32853,0.0074048
+"X:/Growth/Growth/Content/Textures/slither.png","X:/Growth/Growth/Content/bin/DesktopGL/Textures/slither.xnb","TextureProcessor","Texture2DContent",899,32853,0.0057239
+"X:/Growth/Growth/Content/Textures/spectre.png","X:/Growth/Growth/Content/bin/DesktopGL/Textures/spectre.xnb","TextureProcessor","Texture2DContent",1302,32853,0.0071876
+"X:/Growth/Growth/Content/Textures/zombieRunSS.png","X:/Growth/Growth/Content/bin/DesktopGL/Textures/zombieRunSS.xnb","TextureProcessor","Texture2DContent",5262,122965,0.014104
