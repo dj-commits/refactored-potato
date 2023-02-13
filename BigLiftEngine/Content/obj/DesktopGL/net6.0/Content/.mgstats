@@ -1,0 +1,13 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"X:/BigLiftEngine/BigLiftEngine/Content/Effects/File.fx","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Effects/File.xnb","EffectProcessor","CompiledEffectContent",888,1295,0.4563418
+"X:/BigLiftEngine/BigLiftEngine/Content/Fonts/File.spritefont","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Fonts/File.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0.1518898
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/baby.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/baby.xnb","TextureProcessor","Texture2DContent",3217,32853,0.1517487
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/DuckRun.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/DuckRun.xnb","TextureProcessor","Texture2DContent",1964,32853,0.015123
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/fireball.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/fireball.xnb","TextureProcessor","Texture2DContent",895,8277,0.1995116
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/glutton.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/glutton.xnb","TextureProcessor","Texture2DContent",1081,32853,0.0068749
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/lou.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/lou.xnb","TextureProcessor","Texture2DContent",2165,65621,0.0050614
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/malezomb.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/malezomb.xnb","TextureProcessor","Texture2DContent",2146,15445,0.0160014
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/monkey.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/monkey.xnb","TextureProcessor","Texture2DContent",3169,32853,0.0035896
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/slither.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/slither.xnb","TextureProcessor","Texture2DContent",899,32853,0.0036695
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/spectre.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/spectre.xnb","TextureProcessor","Texture2DContent",1302,32853,0.0038602
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/zombieRunSS.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/zombieRunSS.xnb","TextureProcessor","Texture2DContent",5262,122965,0.0107008
