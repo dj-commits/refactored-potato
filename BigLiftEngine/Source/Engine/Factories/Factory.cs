@@ -23,6 +23,7 @@ namespace BigLiftEngine.Source.Engine.Factories
             MoveComponent moveC = player.GetComponent<MoveComponent>();
             CollisionComponent collisionC = player.GetComponent<CollisionComponent>();
 
+            drawC.EnumerableTextureType = DrawComponent.TextureType.Animated;
             drawC.Texture = Assets.Texture(@"Textures/malezomb");
             drawC.IdleAnimation = new Animation(Assets.Texture(@"Textures/DuckRun"), 0, 8, 1, .3f, drawC);
             drawC.WalkAnimation = new Animation(Assets.Texture(@"Textures/DuckRun"), 0, 8, 1, .1f, drawC);
@@ -52,6 +53,7 @@ namespace BigLiftEngine.Source.Engine.Factories
             MoveComponent moveC = ally.GetComponent<MoveComponent>();
             CollisionComponent collisionC = ally.GetComponent<CollisionComponent>();
 
+            drawC.EnumerableTextureType = DrawComponent.TextureType.Animated;
             drawC.Texture = Assets.Texture(@"Textures/malezomb");
             drawC.IdleAnimation = new Animation(Assets.Texture(@"Textures/baby"), 0, 8, 1, .3f, drawC);
             drawC.WalkAnimation = new Animation(Assets.Texture(@"Textures/baby"), 0, 8, 1, .1f, drawC);
@@ -86,6 +88,7 @@ namespace BigLiftEngine.Source.Engine.Factories
             HealthComponent healthC = spectre.GetComponent<HealthComponent>();
             BasicAIComponent basicAIC = spectre.GetComponent<BasicAIComponent>();
 
+            drawC.EnumerableTextureType = DrawComponent.TextureType.Animated;
             drawC.Texture = Assets.Texture(@"Textures/spectre");
             drawC.IdleAnimation = new Animation(Assets.Texture(@"Textures/spectre"), 0, 8, 1, .3f, drawC);
             drawC.WalkAnimation = new Animation(Assets.Texture(@"Textures/slither"), 0, 8, 1, .1f, drawC);
@@ -119,7 +122,7 @@ namespace BigLiftEngine.Source.Engine.Factories
             BulletComponent bulletC = bullet.GetComponent<BulletComponent>();
 
 
-
+            drawC.EnumerableTextureType = DrawComponent.TextureType.Animated;
             drawC.Texture = Assets.Texture(@"Textures/fireball");
             bulletC.ShotAnimation = new Animation(Assets.Texture(@"Textures/fireball"), 0, 8, 1, .1f, drawC);
 
@@ -129,6 +132,35 @@ namespace BigLiftEngine.Source.Engine.Factories
 
 
             return bullet;
+        }
+
+        public static Entity CreateWorld(int sizeX, int sizeY)
+        {
+            Entity world = new Entity("World");
+            world.AddComponent(new GridComponent(world));
+
+            GridComponent gridC = world.GetComponent<GridComponent>();
+
+            gridC.GridSizeX = sizeX;
+            gridC.GridSizeY = sizeY;
+
+            gridC.GenerateGrid(32, 32);
+            foreach(Vector2Int tilePos in gridC.tiles)
+            {
+                Entity tile = new Entity($"Tile_({tilePos.X}, {tilePos.Y})");
+                tile.AddComponent(new TileComponent(tile));
+                tile.AddComponent(new DrawComponent(tile));
+
+                TileComponent tileC = tile.GetComponent<TileComponent>();
+                DrawComponent drawC = tile.GetComponent <DrawComponent>();
+
+                drawC.EnumerableTextureType = DrawComponent.TextureType.Tile;
+                drawC.TileTexture = new TileTexture(Assets.Texture(@"Textures/testTileSet"), 0, 0, 32, 32, drawC);
+                drawC.Position = new Vector2(tilePos.X, tilePos.Y);
+                tileC.Position = tilePos;
+            }
+
+            return world;
         }
     }
 }

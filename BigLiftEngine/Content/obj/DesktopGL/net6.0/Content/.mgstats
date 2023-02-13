@@ -10,4 +10,6 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "X:/BigLiftEngine/BigLiftEngine/Content/Textures/monkey.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/monkey.xnb","TextureProcessor","Texture2DContent",3169,32853,0.0035896
 "X:/BigLiftEngine/BigLiftEngine/Content/Textures/slither.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/slither.xnb","TextureProcessor","Texture2DContent",899,32853,0.0036695
 "X:/BigLiftEngine/BigLiftEngine/Content/Textures/spectre.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/spectre.xnb","TextureProcessor","Texture2DContent",1302,32853,0.0038602
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/TempleTilesheet.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/TempleTilesheet.xnb","TextureProcessor","Texture2DContent",43091,1000085,0.1785542
+"X:/BigLiftEngine/BigLiftEngine/Content/Textures/testTileSet.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/testTileSet.xnb","TextureProcessor","Texture2DContent",945,262229,0.1602907
 "X:/BigLiftEngine/BigLiftEngine/Content/Textures/zombieRunSS.png","X:/BigLiftEngine/BigLiftEngine/Content/bin/DesktopGL/Content/Textures/zombieRunSS.xnb","TextureProcessor","Texture2DContent",5262,122965,0.0107008

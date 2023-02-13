@@ -53,19 +53,7 @@ namespace BigLiftEngine.Source.Engine.Scenes
                     Factory.CreatePlayer("Player");
                     Factory.CreateAlly("Baby");
                     Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-                    Factory.CreateSpectre();
-
-                    Factory.CreateSpectre();
+                    Factory.CreateWorld(256, 256);
 
 
                     break;

@@ -35,3 +35,5 @@ X:\BigLiftEngine\BigLiftEngine\bin\Debug\net6.0\Content\Textures\slither.xnb
 X:\BigLiftEngine\BigLiftEngine\bin\Debug\net6.0\Content\Textures\spectre.xnb
 X:\BigLiftEngine\BigLiftEngine\bin\Debug\net6.0\Content\Textures\zombieRunSS.xnb
 X:\BigLiftEngine\BigLiftEngine\bin\Debug\net6.0\Content\Textures\fireball.xnb
+X:\BigLiftEngine\BigLiftEngine\bin\Debug\net6.0\Content\Textures\TempleTilesheet.xnb
+X:\BigLiftEngine\BigLiftEngine\bin\Debug\net6.0\Content\Textures\testTileSet.xnb
