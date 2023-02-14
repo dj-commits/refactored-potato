@@ -23,7 +23,7 @@ namespace BigLiftEngine.Source.Engine.Components
         {
             Entity = entity;
             collisionBufferTime = .02f;
-            projectlieLifetime = 4f;
+            projectlieLifetime = 2f;
             Damage = 75;
         }
 

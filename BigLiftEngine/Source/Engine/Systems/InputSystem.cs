@@ -3,6 +3,7 @@
 using BigLiftEngine.Source.Engine.Components;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace BigLiftEngine.Source.Engine.Systems
 {
@@ -13,6 +14,8 @@ namespace BigLiftEngine.Source.Engine.Systems
             foreach (InputComponent inputC in RegisterSystem.GetComponents<InputComponent>())
             {
                 inputC.Update(gameTime);
+                Console.WriteLine($"Current Entity Count: {RegisterSystem.registeredEntities.Count}");
+                Console.WriteLine($"Current Tile Count: {RegisterSystem.GetComponents<TileComponent>().Count}");
             }
         }
     }

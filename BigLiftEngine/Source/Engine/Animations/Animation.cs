@@ -12,39 +12,44 @@ namespace BigLiftEngine.Source.Engine.Animations
 {
     public class Animation
     {
-        public Texture2D spriteSheet;
-        public Texture2D currentTextureFrame;
-        public Rectangle[] sourceRectangles;
-        public int frame;
-        public int framesX;
-        public int framesY;
-        public int framesWidth;
-        public int framesHeight;
-        public float frameTime;
-        public float frameTimeLeft;
-        public Vector2 origin;
-        public Vector2 scale;
+        public Texture2D SpriteSheet { get; set; }
+        public Texture2D CurrentTextureFrameX { get; set; }
+        public Texture2D CurrentTextureFrameY { get; set; }
+        public Rectangle[] SourceRectangles { get; set; }
+        public int Frame { get; set; }
+        public int FramesX { get; set; }
+        public int FramesY { get; set; }
+        public int FramesWidth { get; set; }
+        public int FramesHeight { get; set; }
+        public float FrameTime { get; set; }
+        public float FrameTimeLeft { get; set; }
+        public Vector2 Origin { get; set; }
+        public Vector2 Scale { get; set; }
+        public float LayerDepth { get; set; }
 
-        public Animation(Texture2D spriteSheet, int frame, int framesX, int framesY, float frameTime, DrawComponent drawC)
+        public Animation(Texture2D spriteSheet, int frame, int framesX, int framesY, float frameTime, float layerDepth, DrawComponent drawC)
         {
-            origin = new Vector2(0, 0);
-            scale = new Vector2(1, 1);
-            this.spriteSheet = spriteSheet;
-            this.frame = frame;
-            this.framesX = framesX;
-            this.framesY = framesY;
-            this.framesWidth = spriteSheet.Width / framesX;
-            this.framesHeight = spriteSheet.Height / framesY;
-            this.frameTime = frameTime;
-            this.frameTimeLeft = frameTime;
-            this.sourceRectangles = new Rectangle[framesX];
+            Origin = new Vector2(0, 0);
+            Scale = new Vector2(1, 1);
+            this.SpriteSheet = spriteSheet;
+            this.Frame = frame;
+            this.FramesX = framesX;
+            this.FramesY = framesY;
+            this.FramesWidth = spriteSheet.Width / framesX;
+            this.FramesHeight = spriteSheet.Height / framesY;
+            this.FrameTime = frameTime;
+            this.FrameTimeLeft = frameTime;
+            this.SourceRectangles = new Rectangle[framesX];
+            this.LayerDepth = layerDepth;
 
             for (int i = 0; i < framesX; i++)
             {
-                sourceRectangles[i] = new Rectangle(i * framesWidth, 0, framesWidth, framesHeight);
+
+                    SourceRectangles[i] = new Rectangle(i * FramesWidth, 0, FramesWidth, FramesHeight);
+
             }
 
-            if(drawC.CurrentAnimation == null)
+            if (drawC.CurrentAnimation == null)
             {
                 drawC.CurrentAnimation = this;
             }

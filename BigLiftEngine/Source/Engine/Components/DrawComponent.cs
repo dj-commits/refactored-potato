@@ -43,11 +43,14 @@ namespace BigLiftEngine.Source.Engine.Components
 
         public Vector2 Scale { get; set; }
 
+        public float LayerDepth { get; set; }
+
         public DrawComponent(Entity entity) : base(entity)
         {
             Entity = entity;
             Origin = new Vector2(0, 0);
             Scale = new Vector2(1, 1);
+            LayerDepth = 0f;
         }
 
         public override void Update(GameTime gameTime)
@@ -58,31 +61,31 @@ namespace BigLiftEngine.Source.Engine.Components
             {
                 case TextureType.None:
                     RegisterSystem.DeregisterEntity(Entity.ID, Entity);
-
                     break;
 
                 case TextureType.Static:
                     CurrentFrame = Texture;
                     RectangleFrame = new Rectangle(0, 0, Texture.Width, Texture.Height);
-
+                    LayerDepth = LayerDepth;
                     break;
 
                 case TextureType.Animated:
                     Position = Entity.GetComponent<MoveComponent>().Position;
-                    CurrentAnimation.frameTimeLeft -= (float)gameTime.ElapsedGameTime.TotalSeconds;
-                    if (CurrentAnimation.frameTimeLeft <= 0)
+                    CurrentAnimation.FrameTimeLeft -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+                    if (CurrentAnimation.FrameTimeLeft <= 0)
                     {
-                        CurrentAnimation.frameTimeLeft += CurrentAnimation.frameTime;
-                        CurrentAnimation.frame = (CurrentAnimation.frame + 1) % CurrentAnimation.framesX;
+                        CurrentAnimation.FrameTimeLeft += CurrentAnimation.FrameTime;
+                        CurrentAnimation.Frame = (CurrentAnimation.Frame + 1) % CurrentAnimation.FramesX;
                     }
-                    CurrentFrame = CurrentAnimation.spriteSheet;
-                    RectangleFrame = CurrentAnimation.sourceRectangles[CurrentAnimation.frame];
-
+                    CurrentFrame = CurrentAnimation.SpriteSheet;
+                    RectangleFrame = CurrentAnimation.SourceRectangles[CurrentAnimation.Frame];
+                    LayerDepth = CurrentAnimation.LayerDepth;
                     break;
 
                 case TextureType.Tile:
                     CurrentFrame = TileTexture.TileSet;
                     RectangleFrame = TileTexture.TileFrame;
+                    LayerDepth = TileTexture.LayerDepth;
                     break;
             }
         }

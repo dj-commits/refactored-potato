@@ -22,6 +22,7 @@ namespace BigLiftEngine.Source.Engine.Scenes
         {
             InputSystem.Update(gameTime);
             MoveSystem.Update(gameTime);
+            CameraSystem.Update(gameTime);
             DrawSystem.Update(gameTime);
             BulletSystem.Update(gameTime);
             PhysicsSystem.Update(gameTime);

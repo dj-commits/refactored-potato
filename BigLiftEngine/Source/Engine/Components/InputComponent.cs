@@ -43,7 +43,7 @@ namespace BigLiftEngine.Source.Engine.Components
 
             moveC.Position = origin;
             moveC.Target = target;
-            moveC.Speed = 1000f;
+            moveC.Speed = 500f;
 
             bulletC.Velocity = target - origin;
         }

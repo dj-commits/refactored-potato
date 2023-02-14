@@ -11,6 +11,7 @@ namespace BigLiftEngine.Source.Engine.Systems
 {
     public static class DrawSystem
     {
+        public static Matrix activeCamera;
         public static void Update(GameTime gameTime)
         {
             foreach (DrawComponent drawC in RegisterSystem.GetComponents<DrawComponent>())
@@ -20,7 +21,7 @@ namespace BigLiftEngine.Source.Engine.Systems
         }
         public static void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.FrontToBack, null, SamplerState.PointClamp, transformMatrix: activeCamera);
             foreach (DrawComponent drawC in RegisterSystem.GetComponents<DrawComponent>())
             {
                 spriteBatch.Draw(
@@ -32,7 +33,7 @@ namespace BigLiftEngine.Source.Engine.Systems
                     origin: drawC.Origin,
                     scale: drawC.Scale,
                     effects: SpriteEffects.None,
-                    layerDepth: 0.1f);
+                    layerDepth: drawC.LayerDepth);
             }
             spriteBatch.End();
 
@@ -40,6 +41,11 @@ namespace BigLiftEngine.Source.Engine.Systems
             
             
 
+        }
+
+        public static void SetActiveCamera(Matrix transform)
+        {
+            activeCamera = transform;
         }
     }
 }

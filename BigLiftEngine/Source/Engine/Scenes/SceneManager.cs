@@ -18,7 +18,8 @@ namespace BigLiftEngine.Source.Engine.Scenes
         public Scene gameOverScene;
         public Scene victoryScene;
 
-
+        public int ScreenWidth { get; set; }
+        public int ScreenHeight { get; set; }
 
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
@@ -28,6 +29,8 @@ namespace BigLiftEngine.Source.Engine.Scenes
             _graphics = graphics;
             _spriteBatch = spriteBatch;
             _spriteBatch = new SpriteBatch(game.GraphicsDevice);
+            ScreenWidth = _graphics.PreferredBackBufferWidth;
+            ScreenHeight = _graphics.PreferredBackBufferHeight;
             Assets.LoadAllAssets(game.Content);
         }
         public void Initialize()
@@ -51,9 +54,9 @@ namespace BigLiftEngine.Source.Engine.Scenes
                     break;
                 case "Game":
                     Factory.CreatePlayer("Player");
-                    Factory.CreateAlly("Baby");
-                    Factory.CreateSpectre();
-                    Factory.CreateWorld(256, 256);
+                    //Factory.CreateAlly("Baby");
+                    Factory.EnemySpawner("Spectre", 30);
+                    Factory.CreateWorld(512, 512);
 
 
                     break;

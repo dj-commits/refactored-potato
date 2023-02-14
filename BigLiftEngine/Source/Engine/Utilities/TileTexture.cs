@@ -18,9 +18,10 @@ namespace BigLiftEngine.Source.Engine.Utilities
         public int YFrame { get; set; }
 
         public Rectangle[,] TileFrames { get; set; }
-
-        public TileTexture(Texture2D tileSet, int xFrame, int yFrame, int tileSizeX, int tileSizeY,  DrawComponent drawC)
+        public float LayerDepth { get; set; }
+        public TileTexture(Texture2D tileSet, int xFrame, int yFrame, int tileSizeX, int tileSizeY, float layerDepth,  DrawComponent drawC)
         {
+            
             drawC.Origin = new Vector2(0, 0);
             drawC.Scale = new Vector2(1, 1);
             TileSet = tileSet;
@@ -29,12 +30,13 @@ namespace BigLiftEngine.Source.Engine.Utilities
             int FramesWidth = tileSet.Width / tileSizeX;
             int FramesHeight = tileSet.Height / tileSizeY;
             this.TileFrames = new Rectangle[FramesWidth, FramesHeight];
+            this.LayerDepth = layerDepth;
 
             for (int i = 0; i < FramesWidth; i++)
             {
                 for(int j = 0; j < FramesHeight; j++)
                 {
-                    TileFrames[i, j] = new Rectangle(i * FramesWidth, j * FramesHeight, FramesWidth, FramesHeight);
+                    TileFrames[i, j] = new Rectangle(i * FramesWidth, j * FramesHeight, tileSizeX, tileSizeY);
                 }   
             }
 
